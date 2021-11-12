@@ -27,17 +27,20 @@ public class StaticPropertiesAndMethods : MonoBehaviour
 
 
         // 開啟連結
-        Application.OpenURL("https://unity.com/");
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Application.OpenURL("https://unity.com/");
+        }
     }
 
     private void Update()
     {
         // 是否按下按鍵
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // 是否輸入任意鍵
-            print("輸入的按鍵為：" + Input.anyKey);
-        }
+        bool space = Input.GetKeyDown(KeyCode.Space);
+
+        // 是否輸入任意鍵
+        print("輸入的按鍵為：" + Input.anyKey);
+
 
         // 遊戲經過時間
         print("經過時間：" + Time.frameCount);
