@@ -1,10 +1,7 @@
-using JetBrains.Annotations;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class StaticPropertiesAndMethods : MonoBehaviour
 {
-    public KeyCode a;
 
     private void Start()
     {
@@ -27,19 +24,22 @@ public class StaticPropertiesAndMethods : MonoBehaviour
 
 
         // 取得兩點間的距離
-        
+
+
+        // 開啟連結
+        Application.OpenURL("https://unity.com/");
     }
 
     private void Update()
     {
         // 是否按下按鍵
-        if (Input.GetKey("KeyCode"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-        // 是否輸入任意鍵
-        print("輸入的按鍵為：" + Input.anyKey);
+            // 是否輸入任意鍵
+            print("輸入的按鍵為：" + Input.anyKey);
         }
 
         // 遊戲經過時間
-      //  print("經過時間：" + Time.frameCount);
+        print("經過時間：" + Time.frameCount);
     }
 }
