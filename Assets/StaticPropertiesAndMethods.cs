@@ -27,10 +27,7 @@ public class StaticPropertiesAndMethods : MonoBehaviour
 
 
         // ¶}±Ò³sµ²
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Application.OpenURL("https://unity.com/");
-        }
+        Application.OpenURL("https://unity.com/");
     }
 
     private void Update()
